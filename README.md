@@ -1,5 +1,5 @@
 # RealTimeStorytelling1
-New York is one of the world’s largest cities and its own set of public transportation challenges. The subway system of the city is of great significance to the city and it creates numerous problems if it slows down or worse breaks down. This assignment will use MTA’s real time API to print alerts about train delays.
+New York is one of the world’s largest cities and has its own set of public transportation challenges. The subway system of the city is of great significance to the city and it creates numerous problems if it slows down or worse breaks down. This assignment will use MTA’s real time API to print alerts about train delays.
 
 The MTA Real-Time Data feed provides information in the General Transit Feed Specification. More details can be found at https://developers.google.com/transit/gtfs-realtime/. Every time we poll this API we receive a message consisting of a header and an entity. We are concerned with entities. Each entity shall consist or various sub entities like “trip_update”, “vehicle” and “alerts”.
 
