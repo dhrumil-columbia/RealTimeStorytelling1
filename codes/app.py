@@ -61,11 +61,13 @@ def background_thread():
         try:
             print "While",i
             feed = gtfs_realtime_pb2.FeedMessage()
+            #We poll the MTA API here
             response = urllib.urlopen('http://datamine.mta.info/mta_esi.php?key=<your key>&feed_id=1')
             feed.ParseFromString(response.read())
             for entity in feed.entity:
                 j=1
                 if entity.alert.informed_entity:
+                    #If an alert exists in the entity, we iterate over it
                     for e in entity.alert.informed_entity:
                         x=e.trip.trip_id
                         r=e.trip.route_id
