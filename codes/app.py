@@ -61,7 +61,7 @@ def background_thread():
         try:
             print "While",i
             feed = gtfs_realtime_pb2.FeedMessage()
-            response = urllib.urlopen('http://datamine.mta.info/mta_esi.php?key=538ce1c15bf6f1c737beb6a9f1283d62&feed_id=1')
+            response = urllib.urlopen('http://datamine.mta.info/mta_esi.php?key=<your key>&feed_id=1')
             feed.ParseFromString(response.read())
             for entity in feed.entity:
                 j=1
